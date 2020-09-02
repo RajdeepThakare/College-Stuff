@@ -15,6 +15,7 @@ float discount = 0.20;
 int total;
 int quantity;
 double discountedPrice;
+int savedAmount;
 
 int main() {
 
@@ -23,21 +24,33 @@ int main() {
 	cout << "==========================\n\n";
 
 
+
+
 	cout << "Type the name of an item you'd like to buy : ";
 	cin >> name;
 	cout << "How many " << name << "'s" << " would you like to buy : ";
 	cin >> quantity;
+	cout << "\n\n";
 
 	total = quantity * rate;
-
-	cout << "Item : " << name << "\n";
-	cout << "Quantity : " << quantity << "\n";
-	cout << "Total : " << total << "\n";
 
 
 	discountedPrice = total - discount * total;
 
-	cout << "Discounted price is : " << discountedPrice;
+	savedAmount = total - discountedPrice;
+
+
+		cout << "=========================================\n";
+		cout << "|              YOUR BILL                 \n";
+		cout << "|                                        \n";
+		cout << "|  Item : "  << name <<                 "\n";
+		cout << "|  Quantity : " << quantity <<          "\n";
+		cout << "|  Total : " << total <<                "\n";
+		cout << "|  Discounted Price : " << discountedPrice << "\n";
+		cout << "|                                        \n";
+		cout << "|  You saved " << savedAmount << " rupees by 20% discount\n";
+		cout << "|                                        \n";
+		cout << "=========================================\n\n";
 
 	return 0;
 }
