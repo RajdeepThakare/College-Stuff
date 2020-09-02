@@ -6,12 +6,12 @@
 
 #include <iostream>
 
-using std::cout;
+using std::cout; // Standard definitions pre declared to make code more readeable
 using std::cin;
 
 char name[10];
 int rate = 10;
-float discount = 0.20;
+float discount = 0.20; // 20% Discount(i.e. 20/100).
 int total;
 int quantity;
 double discountedPrice;
@@ -23,21 +23,20 @@ int main() {
 	cout << "Welcome to Stationary Shop\n";
 	cout << "==========================\n\n";
 
-
-
-
 	cout << "Type the name of an item you'd like to buy : ";
 	cin >> name;
 	cout << "How many " << name << "'s" << " would you like to buy : ";
 	cin >> quantity;
 	cout << "\n\n";
 
-	total = quantity * rate;
 
+	//====================================================
+	total = quantity * rate; //number of items purchased * default price
 
-	discountedPrice = total - discount * total;
+	discountedPrice = total - discount * total; // salePrice = originalPrice - discountRate * originalPrice
 
-	savedAmount = total - discountedPrice;
+	savedAmount = total - discountedPrice; // Total amount - Discounted Price
+	//====================================================
 
 
 		cout << "=========================================\n";
